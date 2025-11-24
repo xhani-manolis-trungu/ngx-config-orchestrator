@@ -1,0 +1,26 @@
+{
+  "name": "ngx-config-orchestrator",
+  "version": "1.0.0",
+  "description": "A lightweight, robust runtime configuration loader for Angular applications.",
+  "author": "Xhani Manolis Trungu",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "configuration",
+    "runtime",
+    "settings",
+    "orchestrator"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^20.3.13",
+    "@angular/core": "^20.3.13",
+    "rxjs": "^7.8.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "typescript": "~5.8.3"
+  }
+}
