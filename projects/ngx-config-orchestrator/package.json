@@ -22,5 +22,10 @@
   "sideEffects": false,
   "devDependencies": {
     "typescript": "~5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xhani-manolis-trungu/ngx-config-orchestrator",
+    "directory": "projects/ngx-config-orchestrator"
   }
 }
