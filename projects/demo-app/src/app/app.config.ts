@@ -6,7 +6,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideHttpClient(),
     provideConfigOrchestrator({
-      environment: {test: true},
+      environment: {test: false, production: true},
       manifestUrl: '/assets/app-settings.manifest.json'
     })
   ]

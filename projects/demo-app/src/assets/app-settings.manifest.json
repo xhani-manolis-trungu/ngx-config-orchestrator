@@ -1,11 +1,11 @@
 {
-  "api_url": "https://api.test-app.com/v1",
+  "api_url": "https://api.demo-app.com/v1",
   "production": true,
   "feature_flags": {
     "new_dashboard": true
   },
   "auth_settings": {
-    "authority": "https://identity.test-app.com",
+    "authority": "https://identity.demo-app.com",
     "client_id": "test-client-id-123",
     "scope": "openid profile email"
   }
