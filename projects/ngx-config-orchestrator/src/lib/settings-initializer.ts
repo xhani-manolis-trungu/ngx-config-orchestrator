@@ -32,8 +32,7 @@ export function provideConfigOrchestrator(config: AppProvidersArray = {}): Envir
     { provide: APP_SETTINGS, useValue: {} },
     { 
       provide: IAUTH_SETTINGS, 
-      useFactory: (settings: IAppSettings) => settings.auth_settings || {}, 
-      deps: [APP_SETTINGS] 
+      useFactory: () => inject(APP_SETTINGS).auth_settings || {}, 
     },
     // Modern initialization provider
     provideAppInitializer(initializeAppLogic),
