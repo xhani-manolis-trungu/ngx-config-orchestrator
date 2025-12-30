@@ -1,4 +1,3 @@
-
 You are an expert in TypeScript, Angular, and scalable web application development. You write functional, maintainable, performant, and accessible code following Angular and TypeScript best practices.
 
 ## TypeScript Best Practices
@@ -54,3 +53,26 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Design services around a single responsibility
 - Use the `providedIn: 'root'` option for singleton services
 - Use the `inject()` function instead of constructor injection
+
+# Testing
+
+## Practices
+
+- Follow the Arrange-Act-Assert (AAA) pattern for all unit tests.
+- Prioritize testing user behavior (what the user sees/clicks) over implementation details (internal method calls).
+- Isolate the unit under test; mock all external dependencies (Services, HTTP, Router).
+- Use fakeAsync and tick() to handle asynchronous operations and timers deterministically.
+- Do NOT use inject() inside it blocks; resolve dependencies in beforeEach or using TestBed.inject() variables.
+
+## Angular-Specific Patterns
+
+- Signals: Explicitly trigger change detection (fixture.detectChanges()) to flush Signal updates to the DOM.
+- Inputs: Use fixture.componentRef.setInput('propName', value) to test Signal inputs (input()).
+- HTTP: Use provideHttpClientTesting() and HttpTestingController to mock and assert network requests.
+- Harnesses: Use Angular Component Harnesses to interact with child components (especially Material/UI libraries) to avoid brittle DOM queries.
+- DOM Querying: Avoid nativeElement.querySelector. Use By.css or Testing Library queries.
+
+## Packages
+
+- @testing-library/angular: Preferred over native TestBed queries. It enforces accessibility best practices by querying elements by role, text, or label (e.g., screen.getByRole('button')).
+- jasmine-marbles: Use for testing complex RxJS observable streams if simple async/await is insufficient.
